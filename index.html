@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Metronome</title>
     <link rel="icon" type="image/x-icon"
-        href="favicon (1).ico" />
+        href="favicon.ico" />
+        <!-- Latest compiled and minified CSS -->
+
+
 
     <style>
         body {
-            font-family: verdana, arial;
+            font-family: 'Open Sans', sans-serif;
             font-size: 16px;
-            margin_right:20px;
-         
+            text-transform: uppercase;
+            background-color:#1B1B1B;
             text-align:center;
+            color:#F7CA18;
         }
 
         #my_bpm_input {
@@ -26,6 +30,7 @@
         #my_play_button {
             background-color: lightgreen;
             font-size: 40px;
+            padding-bottom: 1%;
         }
 
         #my_volume_input {
@@ -39,13 +44,14 @@
             height: 40px;
             padding: 0;
             white-space: nowrap;
+            
         }
 
         #my_tap_pad {
             width: 200px;
             height: 200px;
-            background-color: lightgray;
-            border: 1px solid gray;
+            background-color:#424141    ;
+            border: 1px solid wheat;
             position:relative;
             left:850px;
         }
@@ -69,6 +75,25 @@
             font-weight: normal;
             font-size: 20px;
         }
+        td {
+            color:#1B1B1B   ;
+        }
+        button {
+            background-color:#F7CA18; /* Green */
+            border: none;
+            color: #1B1B1B;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+     
+        input{
+            background-color: #F7CA18   ;
+        }
+
+
     </style>
 
     <script>
@@ -327,8 +352,10 @@
 
 <body onload="my_onload()" onkeydown="handle_key(event)">
 
-    <h1>Metronome</h1>
-
+    <div class="header">
+        <h1>Metronome</h1>
+        <p>Metronome for playing as a better musician!</p>
+      </div>
     <div><button onclick="play_or_stop()" id="my_play_button">Start</button></div>
 
     <div>
